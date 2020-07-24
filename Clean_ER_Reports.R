@@ -28,7 +28,7 @@ src_file_path <- paste0(Sys.getenv(c("USERPROFILE")),"\\Desktop\\RAC_Projects\\E
 #src_file_path <- ("C:\\Users\\shenderson\\Desktop\\RAC_Projects\\ER_Reports\\Imports")
 
 # Change the client code here to pull report#######
-src_file_pattern <- "^Fraud Results for CPTUS(.*)xls$"
+src_file_pattern <- "^Fraud Results for YOKOS(.*)xls$"
 
 src_file_name <- list.files(path = src_file_path,
                             pattern = src_file_pattern,
@@ -151,7 +151,7 @@ df <- left_join(df, df_invoice_check)
 
 # Insert blank Raction column -----
 
-df$`Raction` = NA
+df$`Raction` = "No Action"
 
 # Re-order columns -----
 
